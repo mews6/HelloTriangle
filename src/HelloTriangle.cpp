@@ -52,14 +52,14 @@ void main(in  uint    VertId : SV_VertexID,
           out PSInput PSIn) 
 {
     float4 Pos[3];
-    Pos[0] = float4(-0.5, -0.5, 0.0, 1.0);
+    Pos[0] = float4(+0.5, -0.5, 0.0, 1.0);
     Pos[1] = float4( 0.0, +0.5, 0.0, 1.0);
-    Pos[2] = float4(+0.5, -0.5, 0.0, 1.0);
+    Pos[2] = float4(-0.5, -0.5, 0.0, 1.0); 
 
     float3 Col[3];
-    Col[0] = float3(0.0, 1.0, 0.0); // We mapped it to a different colors!
-    Col[1] = float3(0.0, 0.0, 1.0); // This will rotate the triangle's value
-    Col[2] = float3(1.0, 0.0, 0.0); // to a different color in every edge of the triangle.
+    Col[0] = float3(1.0, 0.0, 0.0); // red
+    Col[1] = float3(0.0, 1.0, 0.0); // green
+    Col[2] = float3(0.0, 0.0, 1.0); // blue
 
     PSIn.Pos   = Pos[VertId];
     PSIn.Color = Col[VertId];
