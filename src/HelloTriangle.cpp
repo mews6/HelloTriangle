@@ -25,7 +25,7 @@
  *  of the possibility of such damages.
  */
 
-#include "HelloTriangle.hpp"
+#include "Tutorial01_HelloTriangle.hpp"
 
 namespace Diligent
 {
@@ -52,9 +52,15 @@ void main(in  uint    VertId : SV_VertexID,
           out PSInput PSIn) 
 {
     float4 Pos[3];
-    Pos[0] = float4(+0.5, -0.5, 0.0, 1.0);
-    Pos[1] = float4( 0.0, +0.5, 0.0, 1.0);
-    Pos[2] = float4(-0.5, -0.5, 0.0, 1.0); 
+    Pos[0] = float4(+0.5, +0.5, 0.0, 1.0);
+    Pos[1] = float4( 0.0, -0.5, 0.0, 1.0);
+    Pos[2] = float4(-0.5, +0.5, 0.0, 1.0);
+    
+    //Para el output original
+    //Pos[0] = float4(-0.5, -0.5, 0.0, 1.0);
+    //Pos[1] = float4( 0.0, +0.5, 0.0, 1.0);
+    //Pos[2] = float4(+0.5, -0.5, 0.0, 1.0);
+
 
     float3 Col[3];
     Col[0] = float3(1.0, 0.0, 0.0); // red
